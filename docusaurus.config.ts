@@ -4,6 +4,16 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
+const isVercel = Boolean(process.env.VERCEL);
+const siteUrl =
+  process.env.SITE_URL ??
+  (isVercel && process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}`
+    : 'https://giminikhan.github.io');
+const siteBaseUrl =
+  process.env.BASE_URL ??
+  (isVercel ? '/' : '/Physical-AI-Humanoid-Robotics-Course-Book/');
+
 const config: Config = {
   title: 'Physical AI & Humanoid Robotics Course',
   tagline: 'From Digital to Physical Intelligence',
@@ -15,10 +25,10 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://giminikhan.github.io',
+  url: siteUrl,
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/Physical-AI-Humanoid-Robotics-Course-Book/',
+  baseUrl: siteBaseUrl,
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
