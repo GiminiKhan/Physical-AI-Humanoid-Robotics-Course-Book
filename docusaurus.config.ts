@@ -12,7 +12,7 @@ const siteUrl =
     : 'https://giminikhan.github.io');
 const siteBaseUrl =
   process.env.BASE_URL ??
-  (isVercel ? '/' : '/Physical-AI-Humanoid-Robotics-Course-Book/');
+  (isVercel ? '/' : '/book-hackathon/');
 
 const config: Config = {
   title: 'Physical AI & Humanoid Robotics Course',
@@ -33,7 +33,7 @@ const config: Config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'GiminiKhan', // Usually your GitHub org/user name.
-  projectName: 'Physical-AI-Humanoid-Robotics-Course-Book', // Usually your repo name.
+  projectName: 'book-hackathon', // Usually your repo name.
 
   onBrokenLinks: 'throw',
 
